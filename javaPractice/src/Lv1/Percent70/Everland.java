@@ -14,6 +14,7 @@ public class Everland {
         long sum = 0;
 
 //        long answer = money;   //이렇게 해주면 범위 문제를 해결할 수 있는듯
+        // 인자값을 걍 long으로 바꿔주면 되는...
 
         for (int i = 1; i <= count; i++) {
             sum += price*i;
@@ -21,6 +22,10 @@ public class Everland {
         answer = money-sum;
 
         return answer <0 ? -answer : 0;
+    }
+
+    public long solution2(long price, long money, long count) {
+        return Math.max(price * (count * (count + 1) / 2) - money, 0);
     }
 
 
